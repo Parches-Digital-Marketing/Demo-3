@@ -16,6 +16,7 @@ html body {
   width: 100%;
   font-size: 14px;
   font-weight: 400;
+  background-color: black;
 }
 
 html body #root {
@@ -35,5 +36,20 @@ html body .app-container {
   height: -moz-min-content;
   height: min-content;
   position: relative;
+}
+
+.navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: purple;
 }
 /*# sourceMappingURL=index.css.map */

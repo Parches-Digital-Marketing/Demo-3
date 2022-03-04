@@ -1,3 +1,8 @@
+$primaryColor: purple;
+$secondaryColor: white;
+$fontSize: 14px;
+$fontWeight: 400;
+
 html {
     box-sizing: border-box;
     height: 100vh;
@@ -9,8 +14,10 @@ html {
         overflow-x: hidden;
         height: 100vh;
         width: 100%;
-        font-size: 14px;
-        font-weight: 400;
+        font-size: $fontSize;
+        font-weight: $fontWeight;
+        background-color: black;
+        
         #root {
             height: 100%;
         }
