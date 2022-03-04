@@ -1,0 +1,118 @@
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+    color: $textColor;
+    border-bottom: 1px solid #e3e3e3;
+    background-color: white;
+    .content {
+        display: flex;
+        justify-content: center;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            .navbar__logo {
+                width: 70px;
+                height: auto;
+            }
+        }
+        .navbar {
+            .list {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                margin-right: -0px;
+                .list__link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 150%;
+                    padding: 20px 40px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    &.active {
+                        color: $primaryColor;
+                    }
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                    .list__item {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .navbar__button {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .navbar-container {
+        gap: 0;
+        justify-content: space-between;
+        .content {
+            padding: 0 20px;
+            align-items: center;
+            .logo-container {
+                .navbar__logo {
+                    width: 60px;
+                }
+            }
+            .navbar {
+                .list {
+                    display: none;
+                    &.active {
+                        display: flex;
+                        flex-direction: column;
+                        align-content: left;
+                        position: absolute;
+                        top: 80px;
+                        left: 0;
+                        gap: 0px;
+                        background-color: $primaryColor;
+                        height: 300px;
+                        width: 100%;
+                        .list__link {
+                            border: none;
+                            &.active {
+                                color: white;
+                            }
+                            &:hover {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .navbar__button {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 300px;
+                    background-color: #14171a00;
+                    border: none;
+                    cursor: pointer;
+                    .fas {
+                        color: $primaryColor;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
