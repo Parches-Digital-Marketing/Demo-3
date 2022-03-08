@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { useCarousel } from "../hooks/useCarousel";
+import { useState } from 'react';
+import { useCarousel } from '../hooks/useCarousel';
 
-import image1 from "../gallery/image1.jpg";
-import image2 from "../gallery/image2.jpg";
-import image3 from "../gallery/image3.jpg";
-import image4 from "../gallery/image4.jpg";
-import image5 from "../gallery/image5.jpg";
+import image1 from '../gallery/image1.jpg';
+import image2 from '../gallery/image2.jpg';
+import image3 from '../gallery/image3.jpg';
+import image4 from '../gallery/image4.jpg';
+import image5 from '../gallery/image5.jpg';
 
 export default function Carousel() {
   const images = [image1, image2, image3, image4, image5];
 
   const [index, setIndex] = useState(0);
-  const [MoveCarousel] = useCarousel(setIndex, images);
+  const [MoveCarousel] = useCarousel(setIndex, index, images);
 
   return (
     <div className="carousel-container">
@@ -22,8 +22,8 @@ export default function Carousel() {
               <li
                 className={
                   i == index
-                    ? "carousel__item selected"
-                    : "carousel__item unselected"
+                    ? 'carousel__item selected'
+                    : 'carousel__item unselected'
                 }
               >
                 <img
@@ -33,8 +33,22 @@ export default function Carousel() {
                   alt={i}
                 />
                 <div className="carousel-buttons">
-                  <button className="carousel-btn">izq</button>
-                  <button className="carousel-btn">der</button>
+                  <button
+                    className="carousel-btn"
+                    onClick={() => {
+                      MoveCarousel(-1);
+                    }}
+                  >
+                    izq
+                  </button>
+                  <button
+                    className="carousel-btn"
+                    onClick={() => {
+                      MoveCarousel(1);
+                    }}
+                  >
+                    der
+                  </button>
                 </div>
               </li>
             );
