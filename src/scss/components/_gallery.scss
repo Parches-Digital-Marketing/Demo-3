@@ -1,0 +1,35 @@
+.gallery-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .gallery-section {
+    overflow: hidden;
+    max-width: 1000px;
+    border-radius: 40px;
+
+    .gallery {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      white-space: nowrap;
+      transition: all 2s;
+
+      .gallery__item {
+        display: inline;
+
+        .gallery__image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          filter: brightness(60%) grayscale(20%);
+          &:hover {
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+}

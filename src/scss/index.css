@@ -4,7 +4,9 @@ html {
   height: 100vh;
 }
 
-html*, html *::before, html *::after {
+html*,
+html *::before,
+html *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -123,54 +125,47 @@ html body .app-container {
   background-color: red;
 }
 
-.carousel-container {
+.gallery-container {
   width: 100%;
   height: 100%;
-}
-
-.carousel-container .carousel-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
-.carousel-container .carousel-section .carousel {
-  position: inherit;
+.gallery-container .gallery-section {
+  overflow: hidden;
+  max-width: 1000px;
+  border-radius: 40px;
+}
+
+.gallery-container .gallery-section .gallery {
   padding: 0;
   margin: 0;
   list-style: none;
-  max-width: 1000px;
-  width: 100%;
+  white-space: nowrap;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
-.carousel-container .carousel-section .carousel .carousel__item {
-  position: inherit;
-  width: 100%;
-  height: 100%;
+.gallery-container .gallery-section .gallery .gallery__item {
+  display: inline;
 }
 
-.carousel-container .carousel-section .carousel .carousel__item .carousel-buttons {
-  position: absolute;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 50%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.carousel-container .carousel-section .carousel .carousel__item.unselected {
-  display: none;
-}
-
-.carousel-container .carousel-section .carousel .carousel__item .carousel__image {
+.gallery-container .gallery-section .gallery .gallery__item .gallery__image {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(60%) grayscale(20%);
+          filter: brightness(60%) grayscale(20%);
+}
+
+.gallery-container .gallery-section .gallery .gallery__item .gallery__image:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 /*# sourceMappingURL=index.css.map */

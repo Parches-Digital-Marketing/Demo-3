@@ -5,37 +5,39 @@ $fontSize: 16px;
 $fontWeight: 400;
 
 html {
-    box-sizing: border-box;
-    &*, *::before, *::after {
-        box-sizing: inherit;
-    }
+  box-sizing: border-box;
+  &*,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  height: 100vh;
+  body {
+    margin: 0;
+    overflow-x: hidden;
     height: 100vh;
-    body {
-        margin: 0;
-        overflow-x: hidden;
-        height: 100vh;
-        width: 100%;
-        font-size: $fontSize;
-        font-weight: $fontWeight;
-        background-color: black;
-        
-        #root {
-            height: 100%;
-        }
-        .app-container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100%;
-            height: min-content;
-            position: relative;
-        }
+    width: 100%;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    background-color: black;
+
+    #root {
+      height: 100%;
     }
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      height: min-content;
+      position: relative;
+    }
+  }
 }
 
 //sections
-@import "./sections/navbar";
-@import "./sections/home";
-@import "./sections/about";
+@import './sections/navbar';
+@import './sections/home';
+@import './sections/about';
 
 //components
-@import "./components/carousel";
+@import './components/gallery';
