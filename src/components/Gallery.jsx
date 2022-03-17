@@ -9,7 +9,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(0);
   const images = [image1, image2, image3, image4];
   const timeout = useRef(null);
-  const delay = 3500;
+  const delay = 2500;
 
   const reset = () => {
     console.log('cambiando');

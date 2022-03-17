@@ -97,22 +97,86 @@ html body .app-container {
 
 .home-container {
   width: 100%;
-  height: 60%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
+  height: 100%;
   margin-top: 64px;
+  background-color: white;
 }
 
 .home-container .home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.home-container .home .welcome {
+  width: 100%;
+  height: 100%;
+  padding-right: 10px;
+}
+
+.home-container .home .welcome .card-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.home-container .home .welcome .card-section .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 600px;
+}
+
+.home-container .home .welcome .card-section .card .card__title {
+  font-size: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  color: purple;
+}
+
+.home-container .home .welcome .card-section .card .card__subtitle {
+  font-size: 32px;
+}
+
+.home-container .home .welcome .card-section .card .card__description {
+  font-size: 20px;
+}
+
+.home-container .home .welcome .card-section .card .card__buttons .card__button {
+  width: 200px;
+  height: 80px;
+  background-color: purple;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 300px;
+  border-radius: 10px;
+}
+
+.home-container .home .welcome .card-section .card .card__buttons .card__button:hover {
+  color: black;
+  background-color: #ff85ff;
 }
 
 .home-container .home .gallery {
@@ -138,8 +202,6 @@ html body .app-container {
 
 .gallery-container .gallery-section {
   overflow: hidden;
-  max-width: 1000px;
-  border-radius: 40px;
 }
 
 .gallery-container .gallery-section .gallery {
