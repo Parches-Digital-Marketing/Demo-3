@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100%;
     position: relative;
-    background-color: $primaryColor;
+    background: rgba(0, 0, 0, 0) url(../assets/gallery/image4.jpg) no-repeat fixed center center / cover;
     .membership-container{
         display: flex;
         flex-direction: column;
@@ -21,11 +21,11 @@
             text-align: center;
             .membership-header__title{
                 font-size: 64px;
-                color: $whiteColor;
+                color: $secondaryColor;
             }
             .membership-header__description{
                 font-size: 24px;
-                color: $blackColor;
+                color: $whiteColor;
             }
         }
         .membership-cards{
@@ -42,12 +42,12 @@
                 overflow: hidden;
                 border-radius: 10px;
                 text-decoration: none;
-                background: $whiteColor;
+                background: $grayColor;
                 margin: 16px;
                 padding: 32px 32px;
                 transition: transform .45s ease, background .45s ease;
                 &:hover{
-                    background-color: $secondaryColor;
+                    background-color: $primaryColor;
                     color: $whiteColor;
                     cursor: pointer;
                     .membership-card__price{
@@ -71,7 +71,7 @@
                     transition: color .45s ease, border .45s ease;
                 }
                 .membership-card__title{
-                    color: $primaryColor;
+                    color: $secondaryColor;
                     text-transform: uppercase;
                     font-size: 20px;
                     margin: 0 0 16px;

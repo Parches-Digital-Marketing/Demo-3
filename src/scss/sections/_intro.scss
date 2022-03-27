@@ -4,8 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0) url(../assets/background.jpg) no-repeat fixed center center / cover;
+    position: relative;
+    z-index: 1;
     .intro-container{
+        z-index: 1;
         display: flex;
         flex-direction: row;
         max-width: $maxSectionWidth;
@@ -26,7 +28,7 @@
             .intro__text{
                 width: 400px;
                 font-size: 24px;
-                color: $whiteColor;
+                color: $blackColor;
                 margin-bottom: 24px;
             }
             .intro__button{
@@ -41,6 +43,34 @@
                 &:hover{
                     background-color: $secondaryColor;
                     color: $whiteColor;
+                }
+            }
+        }
+    }
+    .intro-gallery{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        .gallery {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            white-space: nowrap;
+            transition: all 2.5s;
+            width: 100%;
+            height: 100%;
+            .gallery__item {
+                display: inline;
+                .gallery__image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: brightness(0.3);
                 }
             }
         }

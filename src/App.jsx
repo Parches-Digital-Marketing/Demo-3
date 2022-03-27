@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import Intro from "./sections/Intro"
 import About from "./sections/About"
 import Membership from "./sections/Membership"
+import Contact from "./sections/Contact"
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Intro />
         <About />
         <Membership />
+        <Contact />
       </div>
     </div>
   )

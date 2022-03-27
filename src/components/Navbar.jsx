@@ -12,7 +12,7 @@ export default function Navbar() {
                     <Link activeClass="active" className="navbar-list__link" to="membership" spy={true} isDynamic={true} smooth={true} duration={500}>
                         <li className="navbar-list__item">Membresia</li>
                     </Link>
-                    <Link activeClass="active" className="navbar-list__link" to="services" spy={true} isDynamic={true} smooth={true} duration={500}>
+                    <Link activeClass="active" className="navbar-list__link" to="contact" spy={true} isDynamic={true} smooth={true} duration={500}>
                         <li className="navbar-list__item">Contacto</li>
                     </Link>
             	</ul>
