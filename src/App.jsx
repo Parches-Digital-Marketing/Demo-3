@@ -1,20 +1,17 @@
-import { Link } from 'react-scroll';
+import Navbar from "./components/Navbar"
+import Intro from "./sections/Intro"
+import About from "./sections/About"
+import Membership from "./sections/Membership"
 
-import Navbar from "./sections/Navbar";
-
-import Home from "./sections/Home";
-import About from './sections/About';
-
-function App() {
-    return (
-        <div className="app-container">
-            <Navbar />
-            <div className="body">
-                <Home />
-                <About />
-            </div>
-        </div>
-    )
+export default function App() {
+  return (
+    <div className="app">
+      <Navbar />
+      <div className="body">
+        <Intro />
+        <About />
+        <Membership />
+      </div>
+    </div>
+  )
 }
-
-export default App

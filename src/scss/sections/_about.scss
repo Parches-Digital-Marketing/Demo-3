@@ -1,4 +1,97 @@
-.about-container {
-    height: 1000px;
-    background-color: red;
+.about-section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 4rem 2.5rem;
+    background-color: $whiteColor;
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: $maxSectionWidth;
+        width: 100%;
+        height: 100%;
+        .about-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            .about-header__title{
+                font-size: 32px;
+                color: $primaryColor;
+            }
+            .about-header__description{
+                font-size: 18px;
+                color: $blackColor;
+            }
+        }
+        .about-cards{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .card{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .card-item{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    .card-item__title{
+                        font-size: 32px;
+                        font-weight: 400;
+                        color: $primaryColor;
+                    }
+                    .card-item__description{
+                        font-size: 24px;
+                        text-align: center;
+                        padding: 0 30px;
+                        color: $blackColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .about-section{
+        padding: 0;
+        .about-container{
+            .about-header{
+                width: 100%;
+                .about-header__title{
+                    font-size: 24px;
+                }
+                .about-header__description{
+                    font-size: 14px;
+                }
+            }
+            .about-cards{
+                .card{
+                    flex-direction: column;
+                    .card-item{
+                        .card-item__title{
+                            font-size: 24px;
+                        }
+                        .card-item__description{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

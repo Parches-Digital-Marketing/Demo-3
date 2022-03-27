@@ -1,43 +1,43 @@
-$primaryColor: purple;
-$secondaryColor: white;
-$tertiaryColor: rgb(255, 133, 255);
-$fontSize: 16px;
-$fontWeight: 400;
+@import "./variables";
 
 html {
-  box-sizing: border-box;
-  &*,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  height: 100vh;
-  body {
-    margin: 0;
-    overflow-x: hidden;
-    height: 100vh;
-    width: 100%;
-    font-size: $fontSize;
-    font-weight: $fontWeight;
-    background-color: black;
-
-    #root {
-      height: 100%;
+    height: 100%;
+    &*, *::before, *::after {
+        box-sizing: inherit;
     }
-    .app-container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      height: min-content;
-      position: relative;
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        color: white;
+        #root{
+            width: 100%;
+        }
+        .app{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            .scroll{
+                top: 0;
+                height: 300px;
+                position: absolute;
+                width: 100%;
+            }
+        }
+        
     }
-  }
 }
 
-//sections
-@import './sections/navbar';
-@import './sections/home';
-@import './sections/about';
+// components
+@import "./components/navbar";
 
-//components
-@import './components/gallery';
+// sections
+@import "./sections/intro";
+@import "./sections/about";
+@import "./sections/membership";
