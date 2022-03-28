@@ -1,6 +1,126 @@
 .contact-section{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-color: $primaryColor;
-    position: relative;
+    .contact-map{
+        width: 100%;
+        height: 100%;
+        .map{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .contact-container{
+        width: 100%;
+        height: min-content;
+        position: absolute;
+        clip-path: polygon(0 0, 50% 0, 60% 100%, 0 100%);
+        background-color: rgba($color: $primaryColor, $alpha: 0.9);
+        .contact-form{
+            max-width: $maxSectionWidth;
+            width: 70%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .contact-form-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                gap: 20px;
+                .contact-form-header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .contact-form-header__title{
+                        font-size: 48px;
+                        color: $whiteColor;
+                    }
+                }
+                .contact-form-item{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    width: 20%;
+                    height: 100%;
+                    padding: 20px 0;
+                    .contact-form-item__label{
+                        color: $whiteColor;
+                    }
+                    .contact-form-item__input{
+                        width: 360px;
+                        background: transparent;
+                        color: $whiteColor;
+                        width: 100%;
+                        font-size: 16px;
+                        border: 0;
+                        border-bottom: 2px solid $secondaryColor;
+                        transition: border-color 0.2s;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    .contact-form-item__textarea{
+                        height: 100px;
+                    }
+                    .contact-form-btn{
+                        width: 200px;
+                        height: 50px;
+                        border: 2px solid $secondaryColor;
+                        border-radius: 4px;
+                        background-color: transparent;
+                        color: $secondaryColor;
+                        font-size: 18px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $secondaryColor;
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .contact-section{
+        display: flex;
+        flex-direction: column;
+        height: min-content;
+        width: 100%;
+        .contact-map{
+            display: none;
+            .map{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .contact-container{
+            width: 100%;
+            height: 100%;
+            max-width: $maxSectionWidth;
+            position: relative;
+            clip-path: none;
+            padding: 100px 0;
+            background-color: $primaryColor;
+            .contact-form{
+                width: 100%;
+                .contact-form-container{
+                    width: 100%;
+                    .contact-form-item{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+    }
 }

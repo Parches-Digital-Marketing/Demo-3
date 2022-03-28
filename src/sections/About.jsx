@@ -1,3 +1,7 @@
+import heart from "../assets/icons/heart.svg";
+import teamwork from "../assets/icons/teamwork.svg";
+import respect from "../assets/icons/respect.svg";
+
 export default function About() {
     
   return (
@@ -18,6 +22,7 @@ export default function About() {
         <div className="about-cards">
           <div className="card">
             <div className="card-item">
+              <img className="card__image" src={respect} alt="respect" />
               <h3 className="card-item__title">Respeto</h3>
               <p className="card-item__description">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias
@@ -27,6 +32,7 @@ export default function About() {
               </p>
             </div>
             <div className="card-item">
+            <img className="card__image" src={teamwork} alt="teamwork" />
               <h3 className="card-item__title">Cooperación</h3>
               <p className="card-item__description">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -36,6 +42,7 @@ export default function About() {
               </p>
             </div>
             <div className="card-item">
+              <img className="card__image" src={heart} alt="heart" />
               <h3 className="card-item__title">Relación social</h3>
               <p className="card-item__description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil

@@ -29,6 +29,7 @@ export default function Intro() {
 
   return (
     <div className="intro-section">
+      <div className="scroll" name="intro" />
       <div className="intro-container">
         <div className="intro-left">
           <h1 className="intro__title">Si fuera fácil todos serían buenos</h1>

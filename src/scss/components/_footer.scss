@@ -1,0 +1,100 @@
+.footer-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+    padding: 30px 0;
+    background-color: $grayColor;
+    .footer-container{
+        max-width: $maxSectionWidth;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        .footer-about{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .footer-about__title{
+                font-size: 20px;
+                color: $whiteColor;
+            }
+            .footer-about__description{
+                width: 70%;
+                color: $blackColor;
+            }
+        }
+        .footer-followus{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .footer-followus_title{
+                font-size: 20px;
+                color: $whiteColor;
+            }
+            .footer-list{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                list-style: none;
+                .footer-list__item{
+                    border-image-width: 100%;
+                    height: 100%;
+                    .footer-list__link{
+                        color: $secondaryColor;
+                        font-size: 26px;
+                        text-decoration: none;
+                        &:hover{
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-copyright{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: right;
+            width: 100%;
+            height: 100%;
+            .footer-copyright__text{
+                color: $blackColor;
+                font-size: 16px;
+                .secondary{
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+
+    .footer-section{
+        .footer-container{
+            flex-direction: column;
+            .footer-about{
+                align-items: center;
+                text-align: center;
+            }
+            .footer-followus{
+                .footer-list{
+                    width: 350px;
+                    justify-content: space-between;
+                }
+            }
+            .footer-copyright{
+                text-align: center;
+            }
+        }
+    }
+}
