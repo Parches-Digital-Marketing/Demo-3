@@ -84,6 +84,9 @@
                     padding: 0;
                     margin: 0;
                     .navbar-list__link{
+                        .navbar-list__item{
+                            padding: 16px;
+                        }
                         padding: 10px;
                         &.active{
                             background-color: $blackColor;

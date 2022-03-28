@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [hambu, setHambu] = useState(false);
+  const [hambu, setHambu] = useState(true);
   return (
     <section className="navbar-section">
       <div className="navbar-container">

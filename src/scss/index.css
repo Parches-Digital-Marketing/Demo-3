@@ -190,6 +190,9 @@ html body .app .scroll {
   .navbar-section .navbar-container .navbar .navbar-list .navbar-list__link {
     padding: 10px;
   }
+  .navbar-section .navbar-container .navbar .navbar-list .navbar-list__link .navbar-list__item {
+    padding: 16px;
+  }
   .navbar-section .navbar-container .navbar .navbar-list .navbar-list__link.active {
     background-color: #616270;
   }
@@ -348,7 +351,8 @@ html body .app .scroll {
     text-align: center;
   }
   .footer-section .footer-container .footer-followus .footer-list {
-    width: 350px;
+    padding: 0;
+    width: 50%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
