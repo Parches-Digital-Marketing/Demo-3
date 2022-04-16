@@ -36,13 +36,10 @@ export default function Footer() {
         </div>
         <div className="footer-copyright">
           <p className="footer-copyright__text">
-            Copyright © 2022 <span className="secondary">Toku</span>
+            Copyright © 2022 <span className="secondary">Parches Desarrollo Web</span>
           </p>
           <p className="footer-copyright__text">
             Todos los derechos reservados
-          </p>
-          <p className="footer-copyright__text">
-            Diseño y mantenido por <span className="secondary">Parches</span>
           </p>
         </div>
       </div>
